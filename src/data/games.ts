@@ -136,79 +136,79 @@ export const GAMES_DATA: GameMetadata[] = [
     ]
   },
   {
-    id: 'trivia-quiz',
-    title: 'Makaralı Genel Kültür',
-    shortTitle: 'Makaralı Kültür',
-    tagline: 'Türk Sineması, Memeler & Komik Gündem',
-    category: 'Mizah & Popüler Kültür',
-    image: '/images/arcade_comedy_trivia_1791457940606.jpg',
-    difficulty: 'Kolay',
+    id: 'neon-2048',
+    title: 'Neon 2048 DX',
+    shortTitle: 'Neon 2048',
+    tagline: 'Pratik Zeka, Akıcı Strateji & Sayı Füzyonu',
+    category: 'Zeka & Bulmaca',
+    image: '/images/arcade_neon_2048.jpg',
+    difficulty: 'Orta',
     accentColor: '#10b981',
     accentBorder: 'border-emerald-500/40',
     accentText: 'text-emerald-400',
     description:
-      'Gülme garantili, son derece komik ve makaralı genel kültür bilgi yarışması! G.O.R.A’dan Kolpaçino’ya, Aşk-ı Memnu’dan Türk internet memelerine, Yeşilçam klasiklerinden altın günü dedikodularına kadar popüler kültürün en eğlenceli soruları! Her cevabın ardından gelen kahkaha dolu açıklamalarla eğlence hiç bitmesin!',
+      'Efsanevi 2048 bulmacasının modern, pratik ve elektrik yüklü neon arcade sürümü! Aynı değere sahip parlayan neon sayı küplerini ok tuşları, dokunmatik kaydırma veya yön butonlarıyla birbirine doğru kaydırarak füzyon oluştur. 2, 4, 8, 16... 1024 ve nihai 2048 bloğuna ulaş! Geri Al, Neon Balyoz ve Tahta Karıştırıcı pratik takviyeleriyle zekanı ve reflekslerini konuştur!',
     objective:
-      'Efsane film repliklerini, unutulmaz Türk memelerini ve komik gündem detaylarını bil, kahkahalara boğul ve en yüksek mizah skorunu yakala.',
+      'Aynı sayıdaki blokları kaydırıp birleştirerek 2048 neon küpüne ulaş, ardından 4096 ve ötesine geçerek rekor puan kır.',
     rules: [
-      'Sorular Türk sineması, popüler diziler, internet memeleri ve gündelik hayatın absürtlüklerini içerir.',
-      'Sonsuz soru modunda sorular peş peşe hiç durmadan akmaya devam eder.',
-      'Doğru cevap verdiğinde +100 puan kazanılır ve kombo çarpanı katlanır.',
-      'Her cevabın ardından konuya dair efsane komik arka plan açıklaması gösterilir.',
-      '3 Can hakkın bulunur; her 5 ardışık doğru cevap serisinde 1 bonus can kazanırsın!',
-      'Zorlandığında %50 Eleme ve Pas Geç jokerlerini kullanabilirsin.'
+      'Ok tuşları (← ↑ → ↓), WASD, dokunmatik kaydırma veya ekran butonlarıyla tüm blokları bir yöne kaydır.',
+      'Aynı değere sahip iki sayı bloğu çarpıştığında tek bir blokta birleşir ve değeri kadar puan kazandırır.',
+      'Her geçerli hamleden sonra boş bir ızgara hücresinde yeni bir 2 veya 4 neon bloğu belirir.',
+      'Geri Al (Undo) özelliği ile yanlış yaptığın son hamleyi tek tıkla geri alabilirsin (Oyun başı 3 hak).',
+      'Neon Balyoz (Hammer) ile tahtayı tıkayan istenmeyen tek bir bloğu anında kırabilirsin (2 hak).',
+      'Tahtada hamle yapacak boş yer kalmadığında ve hiçbir blok birleşemediğinde oyun sona erer.'
     ],
     controls: [
-      { key: '1 - 2 - 3 - 4 Tuşları', action: 'Klavye ile Şıkkı Seç' },
-      { key: 'A - B - C - D Tuşları', action: 'Alternatif Klavye Şık Seçimi' },
-      { key: 'Fare / Dokunmatik Tık', action: 'Şıkkın Üzerine Tıkla' },
-      { key: 'Joker Butonları', action: '50/50 veya Pas Geç Kullan' }
+      { key: 'Ok Tuşları veya W, A, S, D', action: 'Blokları Yukarı, Aşağı, Sola, Sağa Kaydır' },
+      { key: 'Dokunmatik Kaydırma (Swipe)', action: 'Mobilde Parmağını Herhangi Bir Yöne Kaydır' },
+      { key: 'Z Tuşu / Geri Al Butonu', action: 'Son Hamleyi Geri Al (Undo)' },
+      { key: 'Balyoz & Karıştırıcı', action: 'Tıkla ve Tahtada İstenen Bloğa Uygula' }
     ],
     powerups: [
       {
-        name: '%50 Kolpa Eleme',
-        description: 'İki alakasız yanlış seçeneği silerek doğru cevabı ön plana çıkarır.',
-        icon: 'Shield',
+        name: 'Geri Al (Undo)',
+        description: 'Hatalı bir hamle yaptığında tahtayı bir adım önceki durumuna döndürür.',
+        icon: 'RotateCcw',
         color: 'from-emerald-400 to-teal-400'
       },
       {
-        name: 'Pas Geç / Sıvış Jokeri',
-        description: 'Kafanı karıştıran sorudan can kaybetmeden sıvışarak sonraki soruya geçer.',
+        name: 'Neon Balyoz (Hammer)',
+        description: 'Köşede sıkışıp kalan istenmeyen tek bir bloğu kırıp anında yok eder.',
         icon: 'Zap',
-        color: 'from-amber-400 to-yellow-300'
+        color: 'from-amber-400 to-rose-500'
       },
       {
-        name: 'Kahkaha Bonusu (Ekstra Can)',
-        description: 'Her 5 ardışık doğru cevapta otomatik olarak +1 bonus can kazanırsın.',
+        name: 'Füzyon Karıştırıcı (Shuffle)',
+        description: 'Tüm taşları rastgele yeniden dizerek tıkalı pozisyonları ferahlatır.',
         icon: 'Sparkles',
-        color: 'from-rose-400 to-pink-500'
+        color: 'from-sky-400 to-indigo-500'
       }
     ],
     proTips: [
-      'Soruları okurken replikleri karakterin kendi sesiyle aklından canlandırırsan doğru cevap hemen sırıtacaktır!',
-      'Kolpaçino ve Cem Yılmaz sorularında ilk aklına gelen efsane replik genellikle doğrudur.',
-      'Cevabı verdikten sonra çıkan mizahi açıklamaları mutlaka oku, günün stresini unutturur!'
+      'En yüksek değerli bloğunu daima köşelerden birinde (tercihen sol-alt veya sağ-alt) sabit tut.',
+      'Sayıları büyükten küçüğe doğru bir zincir şeklinde dizmek ardışık kombo füzyonları kolaylaştırır.',
+      'Köşedeki ana bloğunu hareket ettirecek zıt yöne asla hamle yapma!'
     ],
     achievements: [
       {
-        id: 'tq-bronze',
-        name: 'Mizah Çırağı',
-        description: 'Makaralı Genel Kültür testinde 500 puana ulaş.',
-        requiredScore: 500,
+        id: 'n2-bronze',
+        name: 'Füzyon Çırağı',
+        description: 'Neon 2048 oyununda 1.000 puana ulaş.',
+        requiredScore: 1000,
         icon: 'Award'
       },
       {
-        id: 'tq-silver',
-        name: 'Meme Eksperi',
-        description: '1.500 puan toplayarak Türk popüler kültürünün ordinaryüsü ol.',
-        requiredScore: 1500,
+        id: 'n2-silver',
+        name: 'Kuantum Mimarı',
+        description: '5.000 puan toplayarak 1024 bloğunu oluştur.',
+        requiredScore: 5000,
         icon: 'Trophy'
       },
       {
-        id: 'tq-gold',
-        name: 'Mizahşör Efsane',
-        description: '3.000 puan ile Türk mizah tarihine adını altın harflerle yazdır.',
-        requiredScore: 3000,
+        id: 'n2-gold',
+        name: '2048 Efsanesi',
+        description: '10.000 puanı aşarak nihai neon tahtın sahibi ol.',
+        requiredScore: 10000,
         icon: 'Sparkles'
       }
     ]

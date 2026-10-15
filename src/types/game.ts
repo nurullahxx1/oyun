@@ -1,4 +1,4 @@
-export type GameId = 'tower-stack' | 'brick-breaker' | 'trivia-quiz';
+export type GameId = 'tower-stack' | 'brick-breaker' | 'neon-2048';
 
 export type GameState = 'BRIEFING' | 'COUNTDOWN' | 'PLAYING' | 'PAUSED' | 'GAME_OVER';
 
@@ -39,5 +39,5 @@ export interface GameMetadata {
 export interface PlayerScores {
   'tower-stack': number;
   'brick-breaker': number;
-  'trivia-quiz': number;
+  'neon-2048': number;
 }

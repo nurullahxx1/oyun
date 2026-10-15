@@ -8,10 +8,10 @@ import { GameBriefingModal } from './components/GameBriefingModal';
 import { CountdownOverlay } from './components/CountdownOverlay';
 import { TowerStackerGame } from './components/games/TowerStackerGame';
 import { BrickBreakerGame } from './components/games/BrickBreakerGame';
-import { TriviaQuizGame } from './components/games/TriviaQuizGame';
+import { Neon2048Game } from './components/games/Neon2048Game';
 import { GameDescriptionSection } from './components/GameDescriptionSection';
 
-const STORAGE_KEY = 'piksel_arena_highscores_v3';
+const STORAGE_KEY = 'piksel_arena_highscores_v4';
 
 export default function App() {
   const [activeGameId, setActiveGameId] = useState<GameId>('tower-stack');
@@ -30,7 +30,7 @@ export default function App() {
           return {
             'tower-stack': Number(parsed['tower-stack']) || 0,
             'brick-breaker': Number(parsed['brick-breaker']) || 0,
-            'trivia-quiz': Number(parsed['trivia-quiz']) || 0,
+            'neon-2048': Number(parsed['neon-2048']) || 0,
           };
         }
       }
@@ -40,7 +40,7 @@ export default function App() {
     return {
       'tower-stack': 0,
       'brick-breaker': 0,
-      'trivia-quiz': 0,
+      'neon-2048': 0,
     };
   });
 
@@ -129,7 +129,7 @@ export default function App() {
     const reset = {
       'tower-stack': 0,
       'brick-breaker': 0,
-      'trivia-quiz': 0,
+      'neon-2048': 0,
     };
     setScores(reset);
     localStorage.removeItem(STORAGE_KEY);
@@ -211,13 +211,13 @@ export default function App() {
               />
             )}
 
-            {activeGameId === 'trivia-quiz' && (
-              <TriviaQuizGame
+            {activeGameId === 'neon-2048' && (
+              <Neon2048Game
                 gameState={gameState}
                 onGameOver={handleGameOver}
                 onRestart={handleRestart}
                 onOpenBriefing={handleOpenBriefing}
-                highScore={scores['trivia-quiz']}
+                highScore={scores['neon-2048']}
               />
             )}
 

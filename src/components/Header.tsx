@@ -66,14 +66,14 @@ export const Header: React.FC<HeaderProps> = ({
             Tuğla Kırıcı DX
           </button>
           <button
-            onClick={() => onSelectGame('trivia-quiz')}
+            onClick={() => onSelectGame('neon-2048')}
             className={`transition-colors cursor-pointer ${
-              activeGameId === 'trivia-quiz'
+              activeGameId === 'neon-2048'
                 ? 'text-emerald-400 font-bold'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            Makaralı Kültür
+            Neon 2048 DX
           </button>
         </nav>
 

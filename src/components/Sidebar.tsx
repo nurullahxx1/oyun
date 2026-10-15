@@ -24,7 +24,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const totalScore =
     (scores['tower-stack'] || 0) +
     (scores['brick-breaker'] || 0) +
-    (scores['trivia-quiz'] || 0);
+    (scores['neon-2048'] || 0);
 
   const content = (
     <div className="flex flex-col h-full bg-slate-950 border-r border-slate-800 p-4 sm:p-5 select-none">

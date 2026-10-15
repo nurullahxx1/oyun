@@ -1,6 +1,6 @@
 {
   "name": "Piksel Arena",
-  "description": "Kule Ustası, Neon Tuğla Kırıcı DX ve Makaralı Genel Kültür. Eğlenceli arcade ve komik popüler kültür oyunları, nasıl oynanır rehberleri ve skor takibi.",
+  "description": "Kule Ustası, Neon Tuğla Kırıcı DX ve Neon 2048 DX. Eğlenceli arcade ve pratik zeka oyunları, detaylı nasıl oynanır rehberleri ve rekor takibi.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
